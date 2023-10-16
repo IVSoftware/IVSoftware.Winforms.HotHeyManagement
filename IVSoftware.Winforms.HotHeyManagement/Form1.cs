@@ -16,7 +16,7 @@ namespace IVSoftware.Winforms.HotHeyManagement
             // Unhook the message filter when this form disposes.
             Disposed += (sender, e) => Application.RemoveMessageFilter(this);
 
-            button1.Click += (sender, e) => MessageBox.Show("Hello");
+            button1.Click += (sender, e) => MessageBox.Show("Clicked or CTRL-M");
         }
 
         private const int WM_KEYDOWN = 0x0100;
@@ -56,6 +56,12 @@ namespace IVSoftware.Winforms.HotHeyManagement
                     richTextBox1.SelectionColor = Color.Blue;
                     richTextBox1.AppendText($"{nameof(Color.Blue)} {Environment.NewLine}");
                     e.Handled = true;
+                    break;
+                case Keys.Left:
+                case Keys.Up:
+                case Keys.Right:
+                case Keys.Down:
+                    richTextBox1.AppendText($"{e.KeyData} {Environment.NewLine}");
                     break;
                 default:
                     break;

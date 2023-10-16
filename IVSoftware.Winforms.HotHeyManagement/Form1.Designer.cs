@@ -34,7 +34,8 @@
             // 
             // button1
             // 
-            button1.Location = new Point(34, 189);
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            button1.Location = new Point(34, 289);
             button1.Name = "button1";
             button1.Size = new Size(402, 34);
             button1.TabIndex = 0;
@@ -43,9 +44,10 @@
             // 
             // richTextBox1
             // 
+            richTextBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             richTextBox1.Location = new Point(34, 12);
             richTextBox1.Name = "richTextBox1";
-            richTextBox1.Size = new Size(402, 171);
+            richTextBox1.Size = new Size(402, 271);
             richTextBox1.TabIndex = 1;
             richTextBox1.Text = "";
             // 
@@ -53,7 +55,7 @@
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(478, 244);
+            ClientSize = new Size(478, 344);
             Controls.Add(richTextBox1);
             Controls.Add(button1);
             Name = "Form1";
