@@ -1,0 +1,1 @@
+# IVSoftware.Winforms.HotHeyManagement
